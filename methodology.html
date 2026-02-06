@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Methodology — Naming a City</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="site-shell">
+      <header class="site-nav">
+        <div class="site-nav-left">
+          <a href="index.html" class="site-nav-title-link">
+            <span class="site-nav-title">Naming a City</span>
+          </a>
+        </div>
+
+        <nav class="site-nav-links" aria-label="Primary">
+          <a href="map.html">City Map</a>
+          <a href="methodology.html" class="active">Methodology</a>
+        </nav>
+      </header>
+
+      <main class="page-main">
+        <article class="page-inner">
+
+          <h1 class="page-title">Methodology</h1>
+
+          <p class="page-subtitle">
+            This project maps the cultural identity embedded in the names of
+            Buenos Aires venues — cafés, bars, restaurants, bookstores, cinemas,
+            and theaters — using OpenStreetMap data and a hybrid classification
+            approach.
+          </p>
+
+          <!-- data collection -->
+          <h2 class="page-section-title">Data collection</h2>
+          <p class="page-text">
+            Venue data was queried from
+            <strong>OpenStreetMap</strong> via the Overpass API, filtered to the
+            administrative boundary of Ciudad Autónoma de Buenos Aires. Only
+            venues with name tags were retained, covering amenity types like
+            <code>cafe</code>, <code>bar</code>, <code>restaurant</code>,
+            <code>cinema</code>, <code>theatre</code>, and shop types like
+            <code>books</code> and <code>bakery</code>.
+          </p>
+
+          <!-- spatial enrichment -->
+          <h2 class="page-section-title">Spatial enrichment</h2>
+          <p class="page-text">
+            Each venue point was spatially joined with
+            <strong>barrio</strong> (neighborhood) and <strong>comuna</strong>
+            (district) boundaries from the
+            <a href="https://data.buenosaires.gob.ar" target="_blank" rel="noopener">Buenos Aires open data portal</a>.
+            Socioeconomic indicators — average household income and average age —
+            were merged at the comuna level from the city's
+            <a href="https://www.estadisticaciudad.gob.ar/eyc/comunasenlaweb/" target="_blank" rel="noopener">Comunas en la Web</a>
+            statistics.
+          </p>
+
+          <!-- classification -->
+          <h2 class="page-section-title">Cultural motif classification</h2>
+          <p class="page-text">
+            Venue names were classified into cultural motifs through a
+            three-stage pipeline:
+          </p>
+          <ol class="page-list">
+            <li>
+              <strong>Regex patterns</strong> — curated regular expressions
+              match names to motifs like <em>Italian heritage</em>,
+              <em>French heritage</em>, <em>Argentine folklore</em>,
+              <em>Religious / devotional</em>, and others.
+            </li>
+            <li>
+              <strong>LLM review</strong> — remaining unclassified names were
+              processed through GPT with structured prompts defining each
+              cultural theme, then flagged for manual verification.
+            </li>
+            <li>
+              <strong>Manual labeling</strong> — review of both regex and LLM
+              outputs, plus direct classification of all names still left
+              unassigned.
+            </li>
+          </ol>
+
+          <!-- analysis -->
+          <h2 class="page-section-title">Analysis</h2>
+          <p class="page-text">
+            <strong>TF-IDF term extraction</strong> was computed per motif 
+            to surface the most distinctive words characterizing each cultural
+            pattern.
+          </p>
+          <p class="page-text">
+            <strong>Pearson correlations</strong> between motif proportions and
+            comuna-level socioeconomic variables (income and average age) were
+            calculated to quantify how naming patterns relate to neighborhood
+            profiles.
+          </p>
+          <p class="page-text">
+            Chain venues (defined as ≥ 8 locations) were
+            excluded from correlation analysis to prevent franchise brands
+            from dominating the results.
+          </p>
+
+        </article>
+      </main>
+    </div>
+  </body>
+</html>
