@@ -1,4 +1,4 @@
-Live demo: https://lara-yeyati-preiss.github.io/naming_a_city.html
+Live demo: https://lara-yeyati-preiss.github.io/naming_a_city/index.html
 
 Naming a City — by Lara Yeyati Preiss
 
