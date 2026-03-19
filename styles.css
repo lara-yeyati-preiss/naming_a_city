@@ -533,19 +533,6 @@ body {
     border-color 160ms ease;
 }
 
-.dashed-card::before {
-  content: "";
-  position: absolute;
-  left: 14px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 7px;
-  height: 7px;
-  border-radius: 999px;
-  background: var(--accent-petrol);
-  opacity: 0.55;
-}
-
 .dashed-card:hover {
   background: #f8f6f1;
   border-color: var(--border-strong);
