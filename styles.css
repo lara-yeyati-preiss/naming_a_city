@@ -536,11 +536,14 @@ body {
     border-color 160ms ease;
 }
 
+<<<<<<< HEAD
 .dashed-card-dot {
   flex-shrink: 0;
   margin-top: 3px;
 }
 
+=======
+>>>>>>> c0d51f7854999da56aaf8aed96a6ba4a337f5d16
 .dashed-card:hover {
   background: var(--cool-hover);
   border-color: var(--border-strong);
