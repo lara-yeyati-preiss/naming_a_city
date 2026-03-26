@@ -5,7 +5,7 @@
     <title>Naming a City</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@300;400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@300;400;500&display=swap"family=IBM+Plex+Sans:wght@300;400;500;600href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@300;400;500&display=swap"family=IBM+Plex+Mono:wght@300;400;500href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@300;400;500&display=swap"display=swap"
       rel="stylesheet"
     />
     <link
@@ -28,34 +28,22 @@
           <a href="methodology.html">Methodology</a>
         </nav>
       </header>
-      <!-- two-column layout: map on the left, side panel on the right -->
+
       <main class="map-main">
-        <!-- left: Mapbox map -->
         <section class="map-shell" aria-label="Map of venue naming motifs">
-          <div id="map" class="mapbox-container">
-          </div>
+          <div id="map" class="mapbox-container"></div>
         </section>
 
-        <!-- right: motif list + motif detail panel -->
         <aside class="side-panel" aria-label="Motif explorer controls">
           <div class="side-panel-header">
             <div class="side-panel-title-row">
               <h2 class="side-title">Motif explorer</h2>
 
-              <!-- toggle between "By Venues" and "By Comunas" views -->
               <div class="view-toggle" aria-label="View mode toggle">
-                <button
-                  class="toggle-btn active"
-                  data-view="venues"
-                  type="button"
-                >
+                <button class="toggle-btn active" data-view="venues" type="button">
                   By Venues
                 </button>
-                <button
-                  class="toggle-btn"
-                  data-view="comunas"
-                  type="button"
-                >
+                <button class="toggle-btn" data-view="comunas" type="button">
                   By Comunas
                 </button>
               </div>
@@ -64,28 +52,22 @@
             <p class="side-subtitle">
               Each point is a venue. Colors encode naming motifs. Hover any point to see that venue information.
             </p>
-
           </div>
 
-          <!-- STATE 1: list of motifs (default view) -->
           <section id="motif-panel-list" aria-label="List of motifs">
             <div class="side-section-title">Choose a motif</div>
             <p class="side-section-subtitle">
               Select a motif to filter venues in the map.
             </p>
-
-            <!-- populated dynamically from app.js based on unique labels -->
             <ul class="dashed-list" id="motif-list"></ul>
           </section>
 
-          <!-- STATE 2: motif detail -->
           <section
             id="motif-detail"
             class="profile-card"
             style="display: none;"
             aria-live="polite"
-          >
-          </section>
+          ></section>
         </aside>
       </main>
     </div>

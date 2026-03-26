@@ -1,26 +1,27 @@
-
-@import url("https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&display=swap");
 
 
 :root {
   --bg: #f5f3ee;
   --panel: #ffffff;
 
-  --ink: #181820;
-  --ink-soft: #51575e;
-  --ink-muted: #3f4247;
-  --ink-subtle: #7b7f86;
+  --ink: #0e1013;
+  --ink-soft: #1e2328;
+  --ink-muted: #363b42;
+  --ink-subtle: #555b63;
 
-  --border-subtle: #e0ddd3;
-  --border-strong: #c7c3b7;
+  --border-subtle: #d8d5cb;
+  --border-strong: #b8b3a6;
 
   --accent-plum: #6a3c46;
   --accent-plum-dark: #4f2a33;
   --accent-moss: #343a33;
   --accent-moss-soft: #474f45;
-  --accent-petrol: #2b4650;
-
-  --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.08);
+  --accent-petrol: #284854;
+  --shadow-soft: 0 10px 24px rgba(0, 0, 0, 0.08);
+  --cool-hover: #f0ede8;
+  --cool-detail: #f4f2ef;
+  --cool-border: #d5d0c8;
 }
 
 
@@ -56,8 +57,7 @@ body {
 }
 
 .heading-serif {
-  font-family: "Source Serif 4", "Georgia", "Palatino Linotype", "Book Antiqua",
-    Garamond, "Times New Roman", serif;
+  font-family: "IBM Plex Sans", system-ui, -apple-system, sans-serif;
 }
 
 .small-caps-label {
@@ -80,10 +80,10 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 16px 32px;
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.10);
 }
 
 .site-nav-left {
@@ -120,7 +120,7 @@ body {
   position: relative;
   padding: 4px 0;
   text-decoration: none;
-  color: var(--ink-subtle);
+  color: var(--ink-muted);
   font-weight: 400;
   transition: color 150ms ease;
 }
@@ -132,6 +132,8 @@ body {
 .site-nav-links a.active {
   color: var(--ink);
   font-weight: 500;
+  border-bottom: 1.5px solid var(--accent-plum);
+  padding-bottom: 2px;
 }
 
 
@@ -144,7 +146,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 80px 24px 96px;
+  padding: 60px 24px 80px;
 }
 
 .hero-shell {
@@ -157,7 +159,7 @@ body {
 }
 
 .hero-card {
-  max-width: 700px;
+  max-width: 560px;
   width: 100%;
   padding: 0;
   background: transparent;
@@ -175,14 +177,6 @@ body {
   color: var(--ink);
 }
 
-.hero-kicker {
-  font-size: 13px;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--ink-subtle);
-  margin-bottom: 8px;
-}
-
 .hero-subtitle {
   margin: 0 0 12px;
   font-size: 19px;
@@ -196,7 +190,7 @@ body {
   margin-top: 6px;
   font-size: 15px;
   line-height: 1.75;
-  color: var(--ink-subtle);
+  color: var(--ink-muted);
   max-width: 540px;
 }
 
@@ -213,7 +207,7 @@ body {
   border-radius: 0;
   background: transparent;
   color: var(--ink);
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 500;
   letter-spacing: 0.01em;
   text-decoration: none;
@@ -282,11 +276,12 @@ body {
   position: relative;
   flex: 1;
   min-height: 540px;
-  background: #fdfdfc;
+  background: #f8f6f1;
   border: 1px solid var(--border-subtle);
-  border-radius: 8px;
+  border-radius: 6px;
   box-shadow: var(--shadow-soft);
   overflow: hidden;
+  outline: 1px solid rgba(0, 0, 0, 0.03);
 }
 
 /* map loading placeholder */
@@ -366,11 +361,13 @@ body {
 
 /* hide map layer fills when no motif selected */
 .mapbox-container .mapboxgl-canvas {
-  filter: grayscale(100%);
+  filter: none;
+  opacity: 0.95;
 }
 
 .mapbox-container.motif-selected .mapboxgl-canvas {
-  filter: grayscale(0%);
+  filter: none;
+  opacity: 1;
 }
 
 .side-panel {
@@ -378,11 +375,11 @@ body {
   flex-direction: column;
   background: var(--panel);
   border: 1px solid var(--border-subtle);
-  border-radius: 8px;
-  padding: 18px 20px 20px;
+  border-radius: 6px;
+  padding: 16px 18px;
   max-height: calc(100vh - 108px);
   overflow-y: auto;
-  box-shadow: var(--shadow-soft);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
 }
 
 .side-panel-control-row {
@@ -395,40 +392,47 @@ body {
 }
 
 .side-panel-title-row {
+  margin: 0;
+  line-height: 1.1;
   display: flex;
-  align-items: center;
+  align-items: baseline;
+  justify-content: space-between;
+  width: 100%;
   margin-bottom: 1.5rem;
   gap: 12px;
 }
 
 .view-toggle {
   display: flex;
-  gap: 0.25rem;
-  background: #f0f0ee;
-  padding: 0.25rem;
-  border-radius: 4px;
+  gap: 0.2rem;
+  background: transparent;
+  padding: 0.2rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+  margin-top: 2px;
 }
 
 .toggle-btn {
-  padding: 0.5rem 1rem;
-  font-size: 0.85rem;
+  padding: 6px 10px;
+  font-size: 12px;
   font-weight: 500;
-  border: none;
+  border: 1px solid transparent;
   background: transparent;
-  color: #666;
+  color: var(--ink-muted);
   cursor: pointer;
-  border-radius: 3px;
-  transition: all 0.2s ease;
+  border-radius: 4px;
+  transition: color 160ms ease, border-color 160ms ease, background 160ms ease;
 }
 
 .toggle-btn.active {
-  background: white;
-  color: #333;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  background: var(--panel);
+  color: var(--ink);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  border-color: var(--border-strong);
 }
 
 .side-panel-header {
-  margin-bottom: 14px;
+  margin-bottom: 18px;
 }
 
 /* hide header content until motif is selected */
@@ -437,20 +441,19 @@ body {
 }
 
 .side-title {
-  font-family: "Source Serif 4", "Georgia", "Palatino Linotype",
-    "Book Antiqua", Garamond, "Times New Roman", serif;
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
   margin: 0 0 4px;
-  font-size: 18px;
-  letter-spacing: 0.06em;
+  font-size: 16px;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--accent-plum);
 }
 
 .side-subtitle {
   margin: 0;
-  font-size: 15px;
-  line-height: 1.7;
-  color: var(--ink-muted);
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--ink-soft);
 }
 
 .side-note {
@@ -462,8 +465,8 @@ body {
 /* back link */
 
 .panel-back-link {
-    padding: 8px 16px !important;
-    border-radius: 20px !important;
+    padding: 7px 14px !important;
+    border-radius: 18px !important;
     border: 1px solid var(--accent-plum) !important;
     background: var(--accent-plum) !important;
     color: #fdfaf7 !important;
@@ -497,14 +500,13 @@ body {
   font-size: 16px;
   font-weight: 600;
   color: var(--accent-plum);
-  font-family: "Source Serif 4", "Georgia", "Palatino Linotype",
-    "Book Antiqua", Garamond, "Times New Roman", serif;
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
 }
 
 .side-section-subtitle {
   margin: 0 0 4px;
   font-size: 12px;
-  color: var(--ink-soft);
+  color: var(--ink-muted);
 }
 
 /* motif list cards */
@@ -520,59 +522,54 @@ body {
 
 .dashed-card {
   position: relative;
-  border-radius: 10px;
-  padding: 10px 14px 10px 32px;
+  border-radius: 8px;
+  padding: 8px 12px;
   font-size: 13px;
   cursor: pointer;
-  background: #ffffff;      
-  border: 1px solid var(--border-subtle); 
+  background: #ffffff;
+  border: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
   transition:
     background 160ms ease,
-    transform 160ms ease,
-    box-shadow 160ms ease,
     border-color 160ms ease;
 }
 
-.dashed-card::before {
-  content: "";
-  position: absolute;
-  left: 14px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 7px;
-  height: 7px;
-  border-radius: 999px;
-  background: var(--accent-petrol);
-  opacity: 0.55;
+.dashed-card-dot {
+  flex-shrink: 0;
+  margin-top: 3px;
 }
 
 .dashed-card:hover {
-  background: #f8f6f1;
+  background: var(--cool-hover);
   border-color: var(--border-strong);
-  transform: translateY(-1px);
-  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.08);
+  box-shadow: none;
+  transform: none;
 }
 
 .dashed-card-title {
   font-weight: 600;
+  color: var(--ink);
   margin-bottom: 2px;
 }
 
 .dashed-card-meta {
-  font-size: 12px;
-  color: var(--ink-muted);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--ink-subtle);
 }
 
 /* detail cards */
 
 .profile-card {
   margin-top: 16px;
-  border-radius: 8px;
-  padding: 11px 13px 13px;
+  border-radius: 6px;
+  padding: 12px 14px 14px;
   font-size: 13px;
-  background: #fdfbf7;
+  background: #ffffff;
   border: 1px solid var(--border-subtle);
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.06);
+  box-shadow: none;
 }
 
 .profile-title {
@@ -580,8 +577,7 @@ body {
   font-size: 15px;
   font-weight: 600;
   color: var(--accent-plum);
-  font-family: "Source Serif 4", "Georgia", "Palatino Linotype",
-    "Book Antiqua", Garamond, "Times New Roman", serif;
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
 }
 
 
@@ -593,7 +589,7 @@ body {
 .profile-body p {
   margin: 0 0 8px;
   line-height: 1.7;
-  color: var(--ink-muted);
+  color: var(--ink-soft);
 }
 
 .profile-body p strong {
@@ -614,10 +610,10 @@ body {
 
 
 .methodology-note {
-  margin-top: 40px;
+  margin-top: 32px;
   padding: 12px 14px;
-  background: #f8f6f1;
-  border-left: 3px solid var(--accent-petrol);
+  background: #ffffff;
+  border-left: 3px solid var(--accent-plum);
   border-radius: 4px;
   font-size: 12px;
   line-height: 1.7;
@@ -636,7 +632,7 @@ body {
 }
 
 .methodology-note strong {
-  color: var(--accent-petrol);
+  color: var(--accent-plum);
   font-weight: 600;
   letter-spacing: 0.02em;
 }
@@ -674,7 +670,7 @@ body {
   margin: 0 0 40px;
   font-size: 16px;
   line-height: 1.7;
-  color: var(--ink-muted);
+  color: var(--ink-soft);
 }
 
 .page-section-title {
@@ -987,4 +983,23 @@ body {
   .page-inner {
     padding: 24px 16px 32px;
   }
+}
+
+
+.motif-tags,
+.correlation-insights,
+.motif-tag {
+  font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.6;
+  background: transparent;
+  padding: 0;
+  color: var(--ink);
+}
+
+#motif-detail .motif-section + .motif-section {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border-subtle);
 }

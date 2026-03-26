@@ -5,7 +5,7 @@
     <title>Naming a City</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@300;400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@300;400;500&display=swap"family=IBM+Plex+Sans:wght@300;400;500;600href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@300;400;500&display=swap"family=IBM+Plex+Mono:wght@300;400;500href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@300;400;500&display=swap"display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
@@ -14,11 +14,7 @@
   <body>
     <div class="site-shell">
       <header class="site-nav">
-        <div class="site-nav-left">
-          <a href="01-hero.html" class="site-nav-title-link">
-            <span class="site-nav-title">Naming a City</span>
-          </a>
-        </div>
+      <div class="site-nav-left" aria-hidden="true"></div>
 
         <nav class="site-nav-links" aria-label="Primary">
           <a href="map.html">City Map</a>
@@ -28,6 +24,7 @@
 
       <main class="hero-main">
         <section class="hero-card" aria-labelledby="hero-title">
+
           <h1 id="hero-title" class="hero-title">Naming a City</h1>
 
           <p class="hero-subtitle">
@@ -35,16 +32,11 @@
           </p>
 
           <p class="hero-subtitle hero-subtitle-secondary">
-            This exploratory project uses OpenStreetMap data and a hybrid text-analysis
-            approach to explore what the names of Buenos Aires cafés, bars,
-            libraries, and other key local venues might reveal about the city's
-            identity.
+            Using OpenStreetMap data and textual analysis, this project maps what the names of Buenos Aires cafés, bars, libraries, and other key local venues might reveal about the city's identity.
           </p>
 
           <div class="hero-button-row">
-            <a href="map.html" class="hero-cta">
-              Enter the map
-            </a>
+            <a href="map.html" class="hero-cta">Enter the map</a>
           </div>
         </section>
       </main>
