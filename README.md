@@ -15,3 +15,5 @@ The site offers an interactive map to explore how naming patterns distribute acr
 - **Classification:** Hybrid approach combining regex pattern matching, LLM-assisted tagging with structured prompts, and manual review.
 - **Analysis:** TF-IDF term extraction per motif; Pearson correlations between motif prevalence and comuna-level income and age.
 - **Visualization:** Mapbox GL for the interactive map, D3.js for charts and data binding.
+
+<img width="1713" height="886" alt="image" src="https://github.com/user-attachments/assets/f9340981-04ba-4902-9af2-92fabbf00a25" />
