@@ -5,10 +5,6 @@
     <title>Naming a City</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@300;400;500&display=swap"family=IBM+Plex+Sans:wght@300;400;500;600href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@300;400;500&display=swap"family=IBM+Plex+Mono:wght@300;400;500href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@300;400;500&display=swap"display=swap"
-      rel="stylesheet"
-    />
-    <link
       href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css"
       rel="stylesheet"
     />
@@ -50,15 +46,12 @@
             </div>
 
             <p class="side-subtitle">
-              Each point is a venue. Colors encode naming motifs. Hover any point to see that venue information.
+              Each point is a venue. Hover over a point to see details.
             </p>
           </div>
 
           <section id="motif-panel-list" aria-label="List of motifs">
             <div class="side-section-title">Choose a motif</div>
-            <p class="side-section-subtitle">
-              Select a motif to filter venues in the map.
-            </p>
             <ul class="dashed-list" id="motif-list"></ul>
           </section>
 
@@ -70,6 +63,11 @@
           ></section>
         </aside>
       </main>
+
+      <footer class="map-attribution">
+        © <a href="https://www.mapbox.com/" target="_blank" rel="noopener">Mapbox</a>
+        © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>
+      </footer>
     </div>
 
     <script src="https://d3js.org/d3.v7.min.js"></script>

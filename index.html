@@ -4,17 +4,17 @@
     <meta charset="utf-8" />
     <title>Naming a City</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@300;400;500&display=swap"family=IBM+Plex+Sans:wght@300;400;500;600href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@300;400;500&display=swap"family=IBM+Plex+Mono:wght@300;400;500href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@300;400;500&display=swap"display=swap"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body>
-    <div class="site-shell">
+    <div class="site-shell site-shell--hero">
       <header class="site-nav">
-      <div class="site-nav-left" aria-hidden="true"></div>
+        <div class="site-nav-left">
+          <a href="index.html" class="site-nav-title-link">
+            <span class="site-nav-title">Naming a City</span>
+          </a>
+        </div>
 
         <nav class="site-nav-links" aria-label="Primary">
           <a href="map.html">City Map</a>
@@ -23,22 +23,34 @@
       </header>
 
       <main class="hero-main">
-        <section class="hero-card" aria-labelledby="hero-title">
+        <div class="hero-art" aria-hidden="true">
+          <img
+            src="assets/hero-lines.png"
+            alt=""
+            class="hero-art-img"
+            width="576"
+            height="1008"
+            loading="eager"
+          />
+        </div>
 
-          <h1 id="hero-title" class="hero-title">Naming a City</h1>
+        <div class="hero-content">
+          <section class="hero-card" aria-labelledby="hero-title">
+            <h1 id="hero-title" class="hero-title">Naming a City</h1>
 
-          <p class="hero-subtitle">
-            A city’s identity, written in its storefronts.
-          </p>
+            <p class="hero-subtitle">
+              A city’s identity, written in its storefronts.
+            </p>
 
-          <p class="hero-subtitle hero-subtitle-secondary">
-            Using OpenStreetMap data and textual analysis, this project maps what the names of Buenos Aires cafés, bars, libraries, and other key local venues might reveal about the city's identity.
-          </p>
+            <p class="hero-subtitle hero-subtitle-secondary">
+              Mapping what the names of Buenos Aires cafés, bars, libraries, and other key local venues reveal about the city’s identity.
+            </p>
 
-          <div class="hero-button-row">
-            <a href="map.html" class="hero-cta">Enter the map</a>
-          </div>
-        </section>
+            <div class="hero-button-row">
+              <a href="map.html" class="hero-cta"><span class="hero-cta-text">Enter the map</span><span class="cta-arrow" aria-hidden="true">→</span></a>
+            </div>
+          </section>
+        </div>
       </main>
     </div>
   </body>

@@ -1,0 +1,7 @@
+.DS_Store
+cache/
+.vscode/
+
+# source exports — only hero-lines.png is used on the site
+assets/hero-lines.svg
+assets/hero-lines-web.png
