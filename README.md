@@ -1,4 +1,4 @@
-Live demo: https://lara-yeyati-preiss.github.io/naming_a_city/index.html
+Live demo: https://lara-yeyati-preiss.github.io/naming_a_city.html
 
 Naming a City — by Lara Yeyati Preiss
 
@@ -16,4 +16,6 @@ The site offers an interactive map to explore how naming patterns distribute acr
 - **Analysis:** TF-IDF term extraction per motif; Pearson correlations between motif prevalence and comuna-level income and age.
 - **Visualization:** Mapbox GL for the interactive map, D3.js for charts and data binding.
 
-<img width="1713" height="886" alt="image" src="https://github.com/user-attachments/assets/f9340981-04ba-4902-9af2-92fabbf00a25" />
+<img width="1728" height="972" alt="naming-cover" src="https://github.com/user-attachments/assets/db9bcedb-e27f-4e19-a156-01f182e799e8" />
+<img width="1728" height="972" alt="naming-italian" src="https://github.com/user-attachments/assets/33bfe69c-5424-4373-b8f7-37720807dcaa" />
+<img width="1728" height="972" alt="naming-italian-choropleth" src="https://github.com/user-attachments/assets/663f218d-76d7-4338-827a-18065702ea10" />
