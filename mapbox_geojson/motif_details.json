@@ -54,7 +54,13 @@
         "tfidf": 0.011777001235094562,
         "count": 8
       }
-    ]
+    ],
+    "correlations": {
+      "ipcf_promedio_pesos": 0.721,
+      "edad_promedio_anios": 0.686,
+      "porc_65mas": 0.605
+    },
+    "description": "English-language names that signal global consumer culture, imported trends, or aspirations toward internationalism."
   },
   "Animales y naturaleza (neutral)": {
     "label_es": "Animales y naturaleza (neutral)",
@@ -111,7 +117,13 @@
         "tfidf": 0.017543859649122806,
         "count": 3
       }
-    ]
+    ],
+    "correlations": {
+      "ipcf_promedio_pesos": -0.102,
+      "edad_promedio_anios": -0.035,
+      "porc_65mas": 0.027
+    },
+    "description": "References to animals, plants, or natural features used as neutral, descriptive branding."
   },
   "Culturas latinoamericanas vecinas": {
     "label_es": "Culturas latinoamericanas vecinas",
@@ -158,7 +170,13 @@
         "tfidf": 0.032809926098743766,
         "count": 4
       }
-    ]
+    ],
+    "correlations": {
+      "ipcf_promedio_pesos": -0.047,
+      "edad_promedio_anios": -0.154,
+      "porc_65mas": -0.103
+    },
+    "description": "Allusions to neighboring Latin American countries: food, geography, colloquialisms, or regional identities within the Southern Cone."
   },
   "Folklore y cultura local argentina": {
     "label_es": "Folklore y cultura local argentina",
@@ -215,7 +233,13 @@
         "tfidf": 0.019455252918287938,
         "count": 5
       }
-    ]
+    ],
+    "correlations": {
+      "ipcf_promedio_pesos": -0.572,
+      "edad_promedio_anios": -0.707,
+      "porc_65mas": -0.673
+    },
+    "description": "Names rooted in Argentine and porteño identity, drawing on slang, fútbol, local customs, and recognizable cultural symbols."
   },
   "Herencia asiática": {
     "label_es": "Herencia asiática",
@@ -272,7 +296,13 @@
         "tfidf": 0.016710535686336712,
         "count": 3
       }
-    ]
+    ],
+    "correlations": {
+      "ipcf_promedio_pesos": 0.432,
+      "edad_promedio_anios": 0.275,
+      "porc_65mas": 0.287
+    },
+    "description": "References to Asian cuisines or cultural motifs, spanning East, South, and Southeast Asia."
   },
   "Herencia de Medio Oriente": {
     "label_es": "Herencia de Medio Oriente",
@@ -294,7 +324,13 @@
         "tfidf": 0.0685560651212905,
         "count": 3
       }
-    ]
+    ],
+    "correlations": {
+      "ipcf_promedio_pesos": 0.364,
+      "edad_promedio_anios": 0.384,
+      "porc_65mas": 0.321
+    },
+    "description": "Names tied to Middle Eastern diasporic presence in Buenos Aires, reflected in food traditions, language, and family heritage."
   },
   "Herencia europea (española)": {
     "label_es": "Herencia europea (española)",
@@ -311,7 +347,13 @@
         "tfidf": 0.05263157894736842,
         "count": 3
       }
-    ]
+    ],
+    "correlations": {
+      "ipcf_promedio_pesos": 0.242,
+      "edad_promedio_anios": 0.386,
+      "porc_65mas": 0.304
+    },
+    "description": "Spanish cultural references—from regional identities to gastronomy—that reflect long-standing historical ties."
   },
   "Herencia europea (francesa)": {
     "label_es": "Herencia europea (francesa)",
@@ -368,7 +410,13 @@
         "tfidf": 0.023809523809523808,
         "count": 3
       }
-    ]
+    ],
+    "correlations": {
+      "ipcf_promedio_pesos": 0.675,
+      "edad_promedio_anios": 0.634,
+      "porc_65mas": 0.652
+    },
+    "description": "French cultural references including gastronomy and cultural motifs."
   },
   "Herencia europea (italiana)": {
     "label_es": "Herencia europea (italiana)",
@@ -425,7 +473,13 @@
         "tfidf": 0.013041118930276967,
         "count": 5
       }
-    ]
+    ],
+    "correlations": {
+      "ipcf_promedio_pesos": 0.28,
+      "edad_promedio_anios": 0.501,
+      "porc_65mas": 0.495
+    },
+    "description": "Italian references connected to food, surnames, or cultural identity, reflecting the city's significant Italian heritage."
   },
   "Herencia europea (otra)": {
     "label_es": "Herencia europea (otra)",
@@ -447,13 +501,25 @@
         "tfidf": 0.03614457831325302,
         "count": 3
       }
-    ]
+    ],
+    "correlations": {
+      "ipcf_promedio_pesos": 0.7,
+      "edad_promedio_anios": 0.624,
+      "porc_65mas": 0.576
+    },
+    "description": "Other European influences—German, Greek, Portuguese, Scandinavian—visible in food traditions, surnames, or cultural symbols."
   },
   "Herencia judía": {
     "label_es": "Herencia judía",
     "label_en": "Jewish Heritage",
     "total_venues": 9,
-    "top_unigrams": []
+    "top_unigrams": [],
+    "correlations": {
+      "ipcf_promedio_pesos": 0.365,
+      "edad_promedio_anios": 0.265,
+      "porc_65mas": 0.246
+    },
+    "description": "Jewish cultural and religious heritage represented in community spaces and cultural identity."
   },
   "Literario / intelectual / artístico": {
     "label_es": "Literario / intelectual / artístico",
@@ -510,7 +576,13 @@
         "tfidf": 0.01864428085214231,
         "count": 4
       }
-    ]
+    ],
+    "correlations": {
+      "ipcf_promedio_pesos": 0.454,
+      "edad_promedio_anios": 0.415,
+      "porc_65mas": 0.319
+    },
+    "description": "Names invoking literature, art, philosophy, or intellectual identity."
   },
   "New Age / self help": {
     "label_es": "New Age / self help",
@@ -522,7 +594,13 @@
         "tfidf": 0.28125,
         "count": 9
       }
-    ]
+    ],
+    "correlations": {
+      "ipcf_promedio_pesos": -0.085,
+      "edad_promedio_anios": 0.119,
+      "porc_65mas": 0.091
+    },
+    "description": "Branding shaped by wellness, spirituality, mindfulness, or contemporary self-improvement language."
   },
   "Nombres comunitarios / unión / popular": {
     "label_es": "Nombres comunitarios / unión / popular",
@@ -564,7 +642,13 @@
         "tfidf": 0.06818181818181818,
         "count": 3
       }
-    ]
+    ],
+    "correlations": {
+      "ipcf_promedio_pesos": -0.71,
+      "edad_promedio_anios": -0.859,
+      "porc_65mas": -0.793
+    },
+    "description": "Collective-oriented names referencing neighborhoods, solidarity, cooperatives, or working-class identity."
   },
   "Nostalgia rioplatense": {
     "label_es": "Nostalgia rioplatense",
@@ -616,7 +700,13 @@
         "tfidf": 0.026188825763752095,
         "count": 3
       }
-    ]
+    ],
+    "correlations": {
+      "ipcf_promedio_pesos": -0.132,
+      "edad_promedio_anios": -0.06,
+      "porc_65mas": -0.133
+    },
+    "description": "Invocations of a Río de la Plata past: tango, cafés, and period aesthetics that evoke local nostalgia."
   },
   "Personal / familiar": {
     "label_es": "Personal / familiar",
@@ -673,7 +763,13 @@
         "tfidf": 0.01744186046511628,
         "count": 3
       }
-    ]
+    ],
+    "correlations": {
+      "ipcf_promedio_pesos": -0.636,
+      "edad_promedio_anios": -0.539,
+      "porc_65mas": -0.482
+    },
+    "description": "Personal names and references to family or close relations."
   },
   "Próceres nacionales y símbolos patrios": {
     "label_es": "Próceres nacionales y símbolos patrios",
@@ -730,7 +826,13 @@
         "tfidf": 0.03621025148295856,
         "count": 3
       }
-    ]
+    ],
+    "correlations": {
+      "ipcf_promedio_pesos": -0.585,
+      "edad_promedio_anios": -0.781,
+      "porc_65mas": -0.793
+    },
+    "description": "References to national heroes and patriotic symbols embedded in Argentina’s history."
   },
   "Religioso / devocional": {
     "label_es": "Religioso / devocional",
@@ -787,6 +889,12 @@
         "tfidf": 0.02356813281806833,
         "count": 3
       }
-    ]
+    ],
+    "correlations": {
+      "ipcf_promedio_pesos": -0.236,
+      "edad_promedio_anios": 0.003,
+      "porc_65mas": 0.048
+    },
+    "description": "Religious references across Catholic, evangelical, and other traditions, foregrounding devotion, saints, or sacred spaces."
   }
 }
