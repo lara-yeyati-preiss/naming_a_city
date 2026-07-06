@@ -16,6 +16,7 @@ The site offers an interactive map to explore how naming patterns distribute acr
 - **Analysis:** TF-IDF term extraction per motif; Pearson correlations between motif prevalence and comuna-level income and age.
 - **Visualization:** Mapbox GL for the interactive map, D3.js for charts and data binding.
 
-<img width="1728" height="972" alt="naming-cover" src="https://github.com/user-attachments/assets/db9bcedb-e27f-4e19-a156-01f182e799e8" />
-<img width="1728" height="972" alt="naming-italian" src="https://github.com/user-attachments/assets/33bfe69c-5424-4373-b8f7-37720807dcaa" />
-<img width="1728" height="972" alt="naming-italian-choropleth" src="https://github.com/user-attachments/assets/663f218d-76d7-4338-827a-18065702ea10" />
+<img width="1728" height="972" alt="naming-cover" src="https://github.com/user-attachments/assets/08089d63-8136-4805-9aca-d8cff1abf1e8" />
+<img width="1728" height="972" alt="naming-italian" src="https://github.com/user-attachments/assets/5e5db7de-1f39-42b0-82f0-0cf40efe5cbd" />
+<img width="1728" height="972" alt="naming-italian-choropleth" src="https://github.com/user-attachments/assets/93128f3a-1e81-43a9-b3df-de5408920b2d" />
+
