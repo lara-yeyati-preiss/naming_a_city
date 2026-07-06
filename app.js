@@ -118,8 +118,10 @@
     const LEGEND_INNER_WIDTH = LEGEND_WIDTH - LEGEND_PAD * 2;
 
     const VIEW_SUBTITLES = {
-      venues: "Each point is a venue. Hover over a point to see details.",
-      comunas: "Each number is a comuna. Hover over a comuna to see details.",
+      venues:
+        "Each point is a venue from Buenos Aires, including cafés, bars, restaurants, bakeries, ice cream shops, bookstores, cinemas, and theaters.",
+      comunas:
+        "Each number marks a comuna, one of Buenos Aires’s fifteen administrative districts, each grouping one or more of the city’s neighborhoods.",
     };
     const roadLayerIds = [];
 
