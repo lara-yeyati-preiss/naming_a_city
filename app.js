@@ -309,6 +309,35 @@
 
     resizeSvg();
     window.addEventListener("resize", resizeSvg);
+
+    mapParent.addEventListener(
+      "wheel",
+      (event) => {
+        const canvas = map.getCanvas();
+        const svgRoot = svg.node();
+        if (!canvas || !svgRoot || event.target === canvas) return;
+        if (!svgRoot.contains(event.target)) return;
+
+        canvas.dispatchEvent(
+          new WheelEvent("wheel", {
+            bubbles: true,
+            cancelable: true,
+            clientX: event.clientX,
+            clientY: event.clientY,
+            deltaX: event.deltaX,
+            deltaY: event.deltaY,
+            deltaZ: event.deltaZ,
+            deltaMode: event.deltaMode,
+            ctrlKey: event.ctrlKey,
+            shiftKey: event.shiftKey,
+            altKey: event.altKey,
+            metaKey: event.metaKey,
+          }),
+        );
+      },
+      { capture: true, passive: true },
+    );
+
     function projectPoint(lon, lat) {
       const point = map.project([lon, lat]);
       this.stream.point(point.x, point.y);
