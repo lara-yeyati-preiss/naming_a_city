@@ -112,7 +112,10 @@
       dotGhost: "#6a6660",
     };
 
-    const LEGEND_WIDTH = 204;
+    const LEGEND_WIDTH = 220;
+    const LEGEND_PAD = 20;
+    const LEGEND_PAD_BOTTOM = 14;
+    const LEGEND_INNER_WIDTH = LEGEND_WIDTH - LEGEND_PAD * 2;
 
     const VIEW_SUBTITLES = {
       venues: "Each point is a venue. Hover over a point to see details.",
@@ -1231,20 +1234,20 @@
 
     const legendBg = legendContainer
       .append("rect")
-      .attr("x", -8)
-      .attr("y", -8)
+      .attr("x", -LEGEND_PAD)
+      .attr("y", -LEGEND_PAD)
       .attr("width", LEGEND_WIDTH)
-      .attr("height", 138)
+      .attr("height", 80)
       .attr("fill", "rgba(12, 12, 14, 0.92)")
       .attr("stroke", "rgba(255, 255, 255, 0.1)")
       .attr("stroke-width", 1)
       .attr("rx", 0);
     const legendTitleFO = legendContainer
       .append("foreignObject")
-      .attr("x", 4)
+      .attr("x", 0)
       .attr("y", 0)
-      .attr("width", LEGEND_WIDTH - 16)
-      .attr("height", 24);
+      .attr("width", LEGEND_INNER_WIDTH)
+      .attr("height", 22);
 
     legendTitleFO
       .append("xhtml:div")
@@ -1289,42 +1292,67 @@
       const legendStops = uniqueStops.map((stop) => ({
         pct: stop,
         label: `${Math.round(stop * 100)}%`,
-      })).reverse();
+      }));
 
-      const itemHeight = 20;
-      const legendHeight = Math.max(
-        legendStops.length * itemHeight + 54,
-        140,
-      );
+      const barX = 0;
+      const barY = 24;
+      const swatchHeight = 12;
+      const labelY = barY + swatchHeight + 15;
+      const legendHeight =
+        LEGEND_PAD + labelY + 4 + LEGEND_PAD_BOTTOM;
+      const innerWidth = LEGEND_INNER_WIDTH;
+      const swatchWidth = innerWidth / legendStops.length;
 
       legendBg.attr("height", legendHeight).attr("width", LEGEND_WIDTH);
 
       legendStops.forEach((stop, i) => {
-        const y = 34 + i * itemHeight;
+        const x = barX + i * swatchWidth;
 
         legendItemsContainer
           .append("rect")
-          .attr("x", 4)
-          .attr("y", y)
-          .attr("width", 22)
-          .attr("height", 14)
-          .attr("rx", 2)
+          .attr("x", x)
+          .attr("y", barY)
+          .attr("width", swatchWidth)
+          .attr("height", swatchHeight)
+          .attr("rx", 0)
           .attr(
             "fill",
             d3.interpolate(MAP.land, motifColor)(stop.pct / maxPct),
           )
-          .attr("stroke", "rgba(255, 255, 255, 0.12)")
-          .attr("stroke-width", 0.5);
+          .attr("stroke", "none");
+
+        if (i > 0) {
+          legendItemsContainer
+            .append("line")
+            .attr("x1", x)
+            .attr("x2", x)
+            .attr("y1", barY)
+            .attr("y2", barY + swatchHeight)
+            .attr("stroke", "rgba(255, 255, 255, 0.18)")
+            .attr("stroke-width", 0.5);
+        }
 
         legendItemsContainer
           .append("text")
-          .attr("x", 34)
-          .attr("y", y + 11)
+          .attr("x", x + swatchWidth / 2)
+          .attr("y", labelY)
+          .attr("text-anchor", "middle")
           .attr("font-size", "12px")
           .attr("font-family", '"IBM Plex Sans", system-ui, sans-serif')
           .attr("fill", "#b4b4bc")
           .text(stop.label);
       });
+
+      legendItemsContainer
+        .append("rect")
+        .attr("x", barX)
+        .attr("y", barY)
+        .attr("width", innerWidth)
+        .attr("height", swatchHeight)
+        .attr("fill", "none")
+        .attr("stroke", "rgba(255, 255, 255, 0.12)")
+        .attr("stroke-width", 0.5)
+        .attr("rx", 0);
     }
     updateDotAppearance();
     toggleView("venues");
