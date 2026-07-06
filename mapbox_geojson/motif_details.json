@@ -60,7 +60,7 @@
       "edad_promedio_anios": 0.686,
       "porc_65mas": 0.605
     },
-    "description": "English-language names that signal global consumer culture, imported trends, or aspirations toward internationalism."
+    "description": "English-language names that signal imported trends, global consumer culture, or aspirations toward internationalism."
   },
   "Animales y naturaleza (neutral)": {
     "label_es": "Animales y naturaleza (neutral)",
@@ -479,7 +479,7 @@
       "edad_promedio_anios": 0.501,
       "porc_65mas": 0.495
     },
-    "description": "Italian references connected to food, surnames, or cultural identity, reflecting the city's significant Italian heritage."
+    "description": "Italian references connected to food, surnames, or cultural identity, reflecting the city’s significant Italian heritage."
   },
   "Herencia europea (otra)": {
     "label_es": "Herencia europea (otra)",
